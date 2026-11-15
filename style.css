@@ -1,0 +1,843 @@
+
+/* ===================================
+   AUREA IMMOBILIEN
+   Modernes, responsives Webdesign
+=================================== */
+
+/* GRUNDEINSTELLUNGEN */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary: #292723;
+    --accent: #b28b60;
+    --accent-hover: #987248;
+    --background: #faf8f5;
+    --white: #ffffff;
+    --text: #514d48;
+    --muted: #77716a;
+    --border: #e7e1d9;
+    --shadow: 0 14px 40px rgba(35, 30, 25, 0.07);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--primary);
+    line-height: 1.2;
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    width: min(1180px, 90%);
+    margin: 0 auto;
+}
+
+.eyebrow {
+    display: inline-block;
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 54px;
+    padding: 14px 30px;
+    border: 1px solid transparent;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: background 0.25s ease,
+                color 0.25s ease,
+                transform 0.25s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn:focus-visible,
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background: var(--accent-hover);
+}
+
+.btn-outline {
+    color: var(--primary);
+    border-color: var(--primary);
+    background: transparent;
+}
+
+.btn-outline:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
+
+/* ===================================
+   NAVIGATION
+=================================== */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 88px;
+    gap: 30px;
+}
+
+.logo {
+    display: inline-flex;
+    flex-direction: column;
+    color: var(--primary);
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+.logo small {
+    margin-top: 7px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 5px;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+}
+
+.navigation a {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--primary);
+    transition: color 0.2s ease;
+}
+
+.navigation a:hover {
+    color: var(--accent);
+}
+
+.navigation .nav-contact {
+    padding: 13px 24px;
+    background: var(--primary);
+    color: var(--white);
+}
+
+.navigation .nav-contact:hover {
+    background: var(--accent);
+    color: var(--white);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--primary);
+    font-size: 29px;
+}
+
+
+/* ===================================
+   STARTBEREICH / HERO
+=================================== */
+
+.hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 690px;
+    padding: 120px 0 160px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(27, 25, 23, 0.78) 0%,
+            rgba(27, 25, 23, 0.48) 55%,
+            rgba(27, 25, 23, 0.20) 100%
+        ),
+        url('images/hero-immobilien.jpg') center / cover no-repeat;
+
+    background-color: #4b4842;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero .eyebrow {
+    color: #dec6a6;
+}
+
+.hero h1 {
+    max-width: 850px;
+    color: var(--white);
+    font-size: clamp(40px, 5.5vw, 76px);
+    margin-bottom: 28px;
+}
+
+.hero p {
+    max-width: 550px;
+    color: #f0eae2;
+    font-size: 17px;
+    margin-bottom: 36px;
+}
+
+
+/* ===================================
+   IMMOBILIENSUCHE
+=================================== */
+
+.search-section {
+    position: relative;
+    z-index: 2;
+    margin-top: -65px;
+}
+
+.search-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr auto;
+    align-items: end;
+    gap: 20px;
+    padding: 30px;
+    background: var(--white);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+}
+
+.search-field {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    min-width: 0;
+}
+
+.search-field label {
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.7px;
+}
+
+.search-field select {
+    width: 100%;
+    min-height: 50px;
+    padding: 0 14px;
+    color: var(--text);
+    background: var(--background);
+    border: 1px solid var(--border);
+}
+
+.btn-search {
+    min-height: 50px;
+    background: var(--primary);
+    color: var(--white);
+    white-space: nowrap;
+}
+
+.btn-search:hover {
+    background: var(--accent);
+}
+
+
+/* ===================================
+   IMMOBILIENKARTEN
+=================================== */
+
+.properties-section {
+    padding: 130px 0 120px;
+}
+
+.section-heading {
+    margin-bottom: 46px;
+}
+
+.section-heading h2 {
+    font-size: clamp(34px, 4vw, 52px);
+    margin-bottom: 18px;
+}
+
+.section-heading p {
+    max-width: 620px;
+    color: var(--muted);
+    font-size: 16px;
+}
+
+.property-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+}
+
+.property-card {
+    min-width: 0;
+    background: var(--white);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.property-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(35, 30, 25, 0.12);
+}
+
+.property-card[hidden] {
+    display: none;
+}
+
+.property-image {
+    position: relative;
+    height: 245px;
+    overflow: hidden;
+    background: #e4ded6;
+}
+
+.property-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.property-card:hover .property-image img {
+    transform: scale(1.05);
+}
+
+.property-badge {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    padding: 7px 13px;
+    background: var(--white);
+    color: var(--primary);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.7px;
+}
+
+.property-content {
+    padding: 27px 25px;
+}
+
+.property-location {
+    display: inline-block;
+    margin-bottom: 11px;
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.property-content h3 {
+    font-size: 25px;
+    margin-bottom: 14px;
+}
+
+.property-content p {
+    min-height: 65px;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.property-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 20px 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.property-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.property-footer strong {
+    color: var(--primary);
+    font-size: 19px;
+}
+
+.property-footer a {
+    color: var(--accent-hover);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.property-footer a:hover {
+    text-decoration: underline;
+}
+
+#no-results {
+    margin-top: 30px;
+    padding: 20px;
+    text-align: center;
+    background: var(--background);
+    color: var(--muted);
+}
+
+#no-results[hidden] {
+    display: none;
+}
+
+
+/* ===================================
+   ÜBER UNS
+=================================== */
+
+.about-section {
+    padding: 110px 0;
+    background: var(--background);
+}
+
+.about-content {
+    max-width: 850px;
+    text-align: center;
+}
+
+.about-content h2 {
+    font-size: clamp(34px, 4vw, 54px);
+    margin-bottom: 24px;
+}
+
+.about-content p {
+    max-width: 750px;
+    margin: 0 auto 32px;
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+
+/* ===================================
+   KONTAKTFORMULAR
+=================================== */
+
+.contact-section {
+    padding: 115px 0;
+}
+
+.contact-form {
+    max-width: 720px;
+    display: grid;
+    gap: 22px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 16px 18px;
+    background: var(--background);
+    color: var(--primary);
+    border: 1px solid var(--border);
+    outline: none;
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--accent);
+}
+
+.contact-form .btn {
+    justify-self: start;
+}
+
+#form-message {
+    color: #356b4a;
+    font-weight: 600;
+}
+
+
+/* ===================================
+   FOOTER
+=================================== */
+
+.footer {
+    background: var(--primary);
+    color: #e8e1d8;
+    padding: 55px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.footer h3 {
+    color: var(--white);
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    font-size: 13px;
+}
+
+
+/* ===================================
+   TABLET
+=================================== */
+
+@media (max-width: 1000px) {
+
+    .navigation {
+        gap: 20px;
+    }
+
+    .search-box {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .btn-search {
+        width: 100%;
+    }
+
+    .property-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .hero {
+        min-height: 620px;
+    }
+
+}
+
+
+/* ===================================
+   SMARTPHONE
+=================================== */
+
+@media (max-width: 700px) {
+
+    .nav-container {
+        min-height: 74px;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .navigation {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 15px 5%;
+        background: var(--white);
+        border-bottom: 1px solid var(--border);
+        box-shadow: var(--shadow);
+    }
+
+    .navigation.active {
+        display: flex;
+    }
+
+    .navigation a {
+        padding: 14px 0;
+    }
+
+    .navigation .nav-contact {
+        margin: 10px 0;
+        padding: 14px;
+        text-align: center;
+    }
+
+    .hero {
+        min-height: 600px;
+        padding: 95px 0 135px;
+
+        background-position: center;
+    }
+
+    .hero h1 {
+        font-size: clamp(36px, 9vw, 52px);
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .search-section {
+        margin-top: -45px;
+    }
+
+    .search-box {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 22px;
+    }
+
+    .properties-section {
+        padding: 90px 0;
+    }
+
+    .property-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .property-image {
+        height: 260px;
+    }
+
+    .property-content p {
+        min-height: auto;
+    }
+
+    .about-section,
+    .contact-section {
+        padding: 85px 0;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+
+
+/* ===================================
+   KLEINE SMARTPHONES
+=================================== */
+
+@media (max-width: 380px) {
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .property-content {
+        padding: 22px 18px;
+    }
+
+    .property-footer strong {
+        font-size: 17px;
+    }
+
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+
+}
+
+/* LOGO-KORREKTUR */
+
+.logo {
+    display: block;
+    position: relative;
+    line-height: 1.1;
+}
+
+.logo span {
+    display: inline;
+}
+
+.logo small {
+    display: block;
+    margin-top: 7px;
+}
+
+/* DETAILANSICHT – BILDGRÖSSE KORRIGIEREN */
+
+.property-dialog {
+    width: min(650px, 92%);
+    max-height: 90vh;
+}
+
+.property-dialog .dialog-image {
+    display: block;
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.property-dialog .dialog-content {
+    padding: 30px;
+}
+
+@media (max-width: 700px) {
+
+    .property-dialog .dialog-image {
+        height: 190px;
+    }
+
+    .property-dialog .dialog-content {
+        padding: 20px;
+    }
+
+}
+
+/* DETAILANSICHT – LETZTER FEINSCHLIFF */
+
+.property-dialog {
+    position: fixed;
+    width: min(650px, 92%);
+    max-height: 90vh;
+    margin: auto;
+    border: none;
+    border-radius: 8px;
+    overflow-y: auto;
+}
+
+.property-dialog .dialog-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    left: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    background: white;
+    color: #292723;
+    border: none;
+    border-radius: 50%;
+
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.property-dialog .dialog-price {
+    display: block;
+    margin-bottom: 22px;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.property-dialog .dialog-content .btn {
+    display: inline-flex;
+}

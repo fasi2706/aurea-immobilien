@@ -1,0 +1,695 @@
+
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AUREA Immobilien | Exklusive Immobilien entdecken</title>
+
+    <meta name="description"
+          content="Entdecken Sie exklusive Wohnungen, Häuser und Villen bei AUREA Immobilien. Fiktives Portfolio-Projekt mit interaktiver Immobiliensuche.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ==================================
+         NAVIGATION
+    ================================== -->
+
+    <header class="header">
+
+        <div class="container nav-container">
+
+            <a href="#start" class="logo">
+                AUREA<span>.</span>
+                <small>IMMOBILIEN</small>
+            </a>
+
+            <button
+                class="menu-toggle"
+                type="button"
+                aria-label="Menü öffnen"
+                aria-expanded="false"
+                aria-controls="navigation">
+                ☰
+            </button>
+
+            <nav class="navigation" id="navigation">
+                <a href="#start">Startseite</a>
+                <a href="#immobilien">Immobilien</a>
+                <a href="#ueber-uns">Über uns</a>
+                <a href="#kontakt" class="nav-contact">Kontakt</a>
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- ==================================
+             STARTBEREICH
+        ================================== -->
+
+        <section class="hero" id="start">
+
+            <div class="container hero-content">
+
+                <span class="eyebrow">
+                    AUREA IMMOBILIEN
+                </span>
+
+                <h1>
+                    Räume, die begeistern.
+                    <br>
+                    Zuhause, die bleiben.
+                </h1>
+
+                <p>
+                    Entdecken Sie außergewöhnliche Immobilien,
+                    die perfekt zu Ihrem Leben passen.
+                </p>
+
+                <a href="#immobilien" class="btn btn-primary">
+                    Immobilien entdecken
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================
+             IMMOBILIENSUCHE
+        ================================== -->
+
+        <section class="search-section" aria-label="Immobiliensuche">
+
+            <div class="container">
+
+                <form class="search-box" id="search-form">
+
+                    <div class="search-field">
+
+                        <label for="location">
+                            Standort
+                        </label>
+
+                        <select id="location" name="location">
+
+                            <option value="">
+                                Alle Standorte
+                            </option>
+
+                            <option value="Berlin">
+                                Berlin
+                            </option>
+
+                            <option value="Hamburg">
+                                Hamburg
+                            </option>
+
+                            <option value="München">
+                                München
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="search-field">
+
+                        <label for="property-type">
+                            Immobilientyp
+                        </label>
+
+                        <select id="property-type" name="property-type">
+
+                            <option value="">
+                                Alle Immobilien
+                            </option>
+
+                            <option value="Wohnung">
+                                Wohnung
+                            </option>
+
+                            <option value="Haus">
+                                Haus
+                            </option>
+
+                            <option value="Villa">
+                                Villa
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="search-field">
+
+                        <label for="max-price">
+                            Maximaler Preis
+                        </label>
+
+                        <select id="max-price" name="max-price">
+
+                            <option value="">
+                                Jeder Preis
+                            </option>
+
+                            <option value="500000">
+                                Bis 500.000 €
+                            </option>
+
+                            <option value="1000000">
+                                Bis 1.000.000 €
+                            </option>
+
+                            <option value="2000000">
+                                Bis 2.000.000 €
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="btn btn-search">
+
+                        Immobilien suchen
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================
+             IMMOBILIEN
+        ================================== -->
+
+        <section class="properties-section" id="immobilien">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="eyebrow">
+                        UNSERE AUSWAHL
+                    </span>
+
+                    <h2>
+                        Besondere Immobilien
+                    </h2>
+
+                    <p>
+                        Entdecken Sie ausgewählte Wohnträume
+                        an attraktiven Standorten.
+                    </p>
+
+                </div>
+
+
+                <div class="property-grid" id="property-grid">
+
+
+                    <!-- IMMOBILIE 1: BERLIN -->
+
+                    <article
+                        class="property-card"
+                        data-location="Berlin"
+                        data-type="Wohnung"
+                        data-price="485000">
+
+                        <div class="property-image">
+
+                            <img
+                                src="images/wohnung-berlin.jpg"
+                                alt="Moderne Eigentumswohnung in Berlin"
+                                loading="lazy">
+
+                            <span class="property-badge">
+                                Neu
+                            </span>
+
+                        </div>
+
+
+                        <div class="property-content">
+
+                            <span class="property-location">
+                                Berlin
+                            </span>
+
+                            <h3>
+                                Elegantes City Apartment
+                            </h3>
+
+                            <p>
+                                Lichtdurchflutete Wohnung mit
+                                modernem Wohnkonzept.
+                            </p>
+
+                            <div class="property-details">
+
+                                <span>85 m²</span>
+
+                                <span>3 Zimmer</span>
+
+                            </div>
+
+
+                            <div class="property-footer">
+
+                                <strong>
+                                    485.000 €
+                                </strong>
+
+                                <button
+                                    class="detail-btn"
+                                    type="button">
+                                    Details ansehen
+                                </button>
+
+                                <a href="#kontakt">
+                                    Anfragen →
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- IMMOBILIE 2: HAMBURG -->
+
+                    <article
+                        class="property-card"
+                        data-location="Hamburg"
+                        data-type="Haus"
+                        data-price="895000">
+
+                        <div class="property-image">
+
+                            <img
+                                src="images/haus-hamburg.jpg"
+                                alt="Modernes Einfamilienhaus in Hamburg"
+                                loading="lazy">
+
+                            <span class="property-badge">
+                                Exklusiv
+                            </span>
+
+                        </div>
+
+
+                        <div class="property-content">
+
+                            <span class="property-location">
+                                Hamburg
+                            </span>
+
+                            <h3>
+                                Modernes Familienhaus
+                            </h3>
+
+                            <p>
+                                Großzügiges Zuhause mit Garten
+                                und hochwertiger Ausstattung.
+                            </p>
+
+                            <div class="property-details">
+
+                                <span>165 m²</span>
+
+                                <span>5 Zimmer</span>
+
+                            </div>
+
+
+                            <div class="property-footer">
+
+                                <strong>
+                                    895.000 €
+                                </strong>
+
+                                <button
+                                    class="detail-btn"
+                                    type="button">
+                                    Details ansehen
+                                </button>
+
+                                <a href="#kontakt">
+                                    Anfragen →
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- IMMOBILIE 3: MÜNCHEN -->
+
+                    <article
+                        class="property-card"
+                        data-location="München"
+                        data-type="Villa"
+                        data-price="1850000">
+
+                        <div class="property-image">
+
+                            <img
+                                src="images/villa-muenchen.jpg"
+                                alt="Exklusive Designvilla in München"
+                                loading="lazy">
+
+                            <span class="property-badge">
+                                Premium
+                            </span>
+
+                        </div>
+
+
+                        <div class="property-content">
+
+                            <span class="property-location">
+                                München
+                            </span>
+
+                            <h3>
+                                Exklusive Designvilla
+                            </h3>
+
+                            <p>
+                                Luxuriöse Architektur mit
+                                weitläufigem Wohnbereich.
+                            </p>
+
+                            <div class="property-details">
+
+                                <span>280 m²</span>
+
+                                <span>6 Zimmer</span>
+
+                            </div>
+
+
+                            <div class="property-footer">
+
+                                <strong>
+                                    1.850.000 €
+                                </strong>
+
+                                <button
+                                    class="detail-btn"
+                                    type="button">
+                                    Details ansehen
+                                </button>
+
+                                <a href="#kontakt">
+                                    Anfragen →
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <!-- Meldung bei erfolgloser Suche -->
+
+                <p id="no-results" hidden>
+                    Keine passenden Immobilien gefunden.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================
+             ÜBER UNS
+        ================================== -->
+
+        <section class="about-section" id="ueber-uns">
+
+            <div class="container about-content">
+
+                <span class="eyebrow">
+                    ÜBER AUREA
+                </span>
+
+                <h2>
+                    Mehr als Immobilien.
+                    Ein neues Lebensgefühl.
+                </h2>
+
+                <p>
+                    AUREA Immobilien steht für besondere Wohnräume,
+                    zeitlose Architektur und persönliche Beratung.
+
+                    Wir präsentieren sorgfältig ausgewählte Immobilien,
+                    die durch Qualität und Charakter überzeugen.
+                </p>
+
+                <a
+                    href="#kontakt"
+                    class="btn btn-outline">
+
+                    Kontakt aufnehmen
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================
+             KONTAKT
+        ================================== -->
+
+        <section class="contact-section" id="kontakt">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="eyebrow">
+                        KONTAKT
+                    </span>
+
+                    <h2>
+                        Ihr neues Zuhause beginnt hier.
+                    </h2>
+
+                    <p>
+                        Haben Sie Fragen zu einer Immobilie?
+                        Schreiben Sie uns eine Nachricht.
+                    </p>
+
+                </div>
+
+
+                <form
+                    id="contact-form"
+                    class="contact-form">
+
+                    <div class="form-group">
+
+                        <label for="name">
+                            Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Ihr Name"
+                            autocomplete="name"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            E-Mail
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Ihre E-Mail-Adresse"
+                            autocomplete="email"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="message">
+                            Nachricht
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="5"
+                            placeholder="Ihre Nachricht"
+                            required></textarea>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary">
+
+                        Nachricht senden
+
+                    </button>
+
+
+                    <p
+                        id="form-message"
+                        aria-live="polite">
+                    </p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==================================
+         IMMOBILIEN-DETAILANSICHT
+    ================================== -->
+
+    <dialog
+        id="property-dialog"
+        class="property-dialog"
+        aria-labelledby="dialog-title">
+
+        <button
+            type="button"
+            class="dialog-close"
+            id="dialog-close"
+            aria-label="Detailansicht schließen">
+
+            &times;
+
+        </button>
+
+
+        <img
+            id="dialog-image"
+            src=""
+            alt=""
+            class="dialog-image">
+
+
+        <div class="dialog-content">
+
+            <span
+                id="dialog-location"
+                class="eyebrow">
+            </span>
+
+
+            <h2 id="dialog-title"></h2>
+
+
+            <div class="dialog-facts">
+
+                <span id="dialog-area"></span>
+
+                <span id="dialog-rooms"></span>
+
+            </div>
+
+
+            <p id="dialog-description"></p>
+
+
+            <strong
+                id="dialog-price"
+                class="dialog-price">
+            </strong>
+
+
+            <a
+                href="#kontakt"
+                id="dialog-contact"
+                class="btn btn-primary">
+
+                Immobilie anfragen
+
+            </a>
+
+        </div>
+
+    </dialog>
+
+
+    <!-- ==================================
+         FOOTER
+    ================================== -->
+
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <div>
+
+                <h3>
+                    AUREA Immobilien
+                </h3>
+
+                <p>
+                    Besondere Immobilien.
+                    Besondere Lebensräume.
+                </p>
+
+            </div>
+
+
+            <p>
+                © 2026 AUREA Immobilien · Demo-Portfolio-Projekt
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
