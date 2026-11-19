@@ -2,7 +2,7 @@
 
 Eine moderne und responsive Immobilien-Webseite als Portfolio-Projekt, entwickelt mit HTML, CSS und JavaScript.
 
-**[Live-Demo ansehen](https://fasi2706.github.io/aurea-immobilien/)**
+**[Live-Demo ansehen](https://mavesso.github.io/aurea-immobilien/)**
 
 ## Über das Projekt
 
